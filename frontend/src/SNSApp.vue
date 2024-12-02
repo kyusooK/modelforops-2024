@@ -115,6 +115,27 @@ export default {
         flipped: [],
         ImageUrl: '',
         aggregate: [
+            { 
+                title: 'Order', 
+                description: '', 
+                key: 'orders', 
+                route: '/orders/orders',
+                ImageUrl: '',
+            },
+            { 
+                title: 'Delivery', 
+                description: '', 
+                key: 'deliveries', 
+                route: '/deliveries/deliveries',
+                ImageUrl: '',
+            },
+            { 
+                title: 'Inventory', 
+                description: '', 
+                key: 'inventories', 
+                route: '/products/inventories',
+                ImageUrl: '',
+            },
             
         ],
     }),

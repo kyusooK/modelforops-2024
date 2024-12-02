@@ -60,7 +60,7 @@
     const axios = require('axios').default;
 
     export default {
-        name: 'OderOrderDetail',
+        name: 'OrderOrderDetail',
         components:{},
         props: {
         },

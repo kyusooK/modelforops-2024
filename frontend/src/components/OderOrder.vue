@@ -81,7 +81,7 @@
 
 
     export default {
-        name: 'OderOrder',
+        name: 'OrderOrder',
         components:{
         },
         props: {

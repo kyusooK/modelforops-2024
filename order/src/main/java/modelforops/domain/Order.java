@@ -1,11 +1,13 @@
 package modelforops.domain;
 
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import lombok.Data;
-import modelforops.OderApplication;
+import modelforops.OrderApplication;
 
 @Entity
 @Table(name = "Order_table")
@@ -24,7 +26,7 @@ public class Order {
     private String status;
 
     public static OrderRepository repository() {
-        OrderRepository orderRepository = OderApplication.applicationContext.getBean(
+        OrderRepository orderRepository = OrderApplication.applicationContext.getBean(
             OrderRepository.class
         );
         return orderRepository;
