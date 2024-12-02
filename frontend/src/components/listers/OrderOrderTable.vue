@@ -50,11 +50,12 @@
 
 <script>
     const axios = require('axios').default;
+    import OrderOrder from '../OrderOrder.vue';
     
     export default {
         name: 'OrderOrderManager',
         components: {
-            OrderOrder,
+            OrderOrder
         },
         props: {
             offline: Boolean,
