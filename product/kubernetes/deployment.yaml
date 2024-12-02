@@ -13,10 +13,11 @@ spec:
     metadata:
       labels:
         app: product
+      namespace: "shopping"
     spec:
       containers:
         - name: product
-          image: "username/product:latest"
+          image: "kimkyusoo/product:1202"
           ports:
             - containerPort: 8080
           readinessProbe:

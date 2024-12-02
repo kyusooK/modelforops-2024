@@ -13,9 +13,10 @@ spec:
     metadata:
       labels:
         app: gateway
+      namespace: "shopping"
     spec:
       containers:
         - name: gateway
-          image: username/gateway:latest
+          image: kimkyusoo/gateway:1202
           ports:
             - containerPort: 8080

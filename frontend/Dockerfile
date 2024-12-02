@@ -1,11 +1,10 @@
-FROM webratio/nodejs-http-server
+FROM node:14-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+FROM nginx:alpine
+EXPOSE 80
 
-VOLUME /tmp
-ADD dist /opt/www
-ADD run.sh /opt/run.sh
-ARG VUE_APP_API_HOST
-ENV VUE_APP_API_HOST=$VUE_APP_API_HOST
-ENV TZ=Asia/Seoul
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-EXPOSE 8080
-ENTRYPOINT ["sh","/opt/run.sh" ]
+CMD ["nginx", "-g", "daemon off;"]
